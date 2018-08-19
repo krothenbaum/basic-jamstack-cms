@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Container, Column, Row } from 'react-rasta'
 import styled, { ThemeProvider } from 'styled-components'
 
-import Header from './header'
+import Header from './Header'
 import './layout.css'
 import theme from '../styles/theme'
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { prop } from 'styled-tools'
-import {rgba} from 'polished'
+import { rgba } from 'polished'
 
 const StyledHeader = styled.div`
   background-color: ${prop('theme.colors.textGrey', 'rebeccapurple')};
@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
   &:hover {
     color: ${prop('theme.colors.textLight')};
     transition: all 200ms ease-in;
-    text-shadow: 4px 4px 4px ${rgba('#323247', 0.2)}
+    text-shadow: 4px 4px 4px ${rgba('#323247', 0.2)};
   }
 `
 
