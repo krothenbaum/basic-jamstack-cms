@@ -11,7 +11,9 @@ const IndexPage = ({ data }) => {
       <Row justifyContent="center" direction="column">
         {edges.map((item, index) => {
           const { title, imgSrc, markdown } = item.node;
-          const randomSrc = `${imgSrc}?=sig${index}`;
+          const randomNum = Math.floor(Math.random() * 100  * index)
+          const randomSrc = `${imgSrc}?=sig${randomNum}`;
+          console.log(randomSrc);
           return (
             <Card title={title} imgSrc={randomSrc} markdown={markdown} key={index} />
           );
