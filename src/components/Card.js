@@ -1,8 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
+import LowLight from 'react-lowlight';
+import js from 'highlight.js/lib/languages/javascript';
 import { prop } from 'styled-tools';
 import { Column, Row } from 'react-rasta';
 import { rgba } from 'polished';
+
+LowLight.registerLanguage('js', js);
+
+const CodeBlock = ({ language, value }) => (
+  <LowLight language={language} value={value} />
+);
 
 const StyledCard = styled(Column)`
   margin: 1rem 0;
@@ -24,7 +33,7 @@ const Heading = styled.h2`
 const Text = styled.div`
   font-family: sans-serif;
   & h3 {
-    color: ${prop('theme.colors.lightBlue')}
+    color: ${prop('theme.colors.lightBlue')};
   }
 
   $ pre {
@@ -32,7 +41,6 @@ const Text = styled.div`
   }
 
   & p {
-
     color: ${prop('theme.colors.textGrey')};
   }
 `;
@@ -45,7 +53,7 @@ const Image = styled.img`
   border-radius: 2px;
 `;
 
-const Card = ({ imgSrc, html, title }) => (
+const Card = ({ imgSrc, markdown, title }) => (
   <StyledCard size={6} alignSelf="center">
     <Row justifyContent="center" alignItems="center" direction="row">
       <Column size={4}>
@@ -53,7 +61,9 @@ const Card = ({ imgSrc, html, title }) => (
       </Column>
       <Column size="auto">
         <Heading>{title}</Heading>
-        <Text dangerouslySetInnerHTML={{ __html: html }} />
+        <Text>
+          <ReactMarkdown source={markdown} renderers={{ code: CodeBlock }} />
+        </Text>
       </Column>
     </Row>
   </StyledCard>
