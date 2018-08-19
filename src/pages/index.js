@@ -8,7 +8,7 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <Row justifyContent="center" direction="column">
+      <Row justifyContent="center" alignContent="center" direction="column">
         {edges.map((item, index) => {
           const { html, frontmatter } = item.node;
           const { title, imgSrc } = frontmatter;

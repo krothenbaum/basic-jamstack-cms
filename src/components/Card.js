@@ -10,6 +10,12 @@ const StyledCard = styled(Column)`
   background-color: ${prop('theme.colors.textLight')};
   border-radius: 4px;
   box-shadow: 4px 4px 2px ${rgba('#323247', 0.2)};
+  transition: all 250ms ease-out;
+
+  &:hover {
+    transform: translateY(-8px);
+    transition: all 250ms ease-in;
+  }
 `;
 
 const Heading = styled.h2`
@@ -41,7 +47,7 @@ const Image = styled.img`
 
 const Card = ({ imgSrc, html, title }) => (
   <StyledCard size={6} alignSelf="center">
-    <Row justifyContent="center" direction="row">
+    <Row justifyContent="center" alignItems="center" direction="row">
       <Column size={4}>
         <Image src={imgSrc} />
       </Column>
