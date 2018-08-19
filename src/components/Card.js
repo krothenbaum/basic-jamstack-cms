@@ -44,6 +44,7 @@ const Text = styled.div`
     color: ${prop('theme.colors.textGrey')};
   }
 `;
+
 const Image = styled.img`
   display: flex;
   margin: 0 auto;

@@ -10,7 +10,6 @@ const StyledHeader = styled.div`
   margin-bottom: 1.45rem;
   margin-left: -15px;
   margin-right: -15px;
-  border-bottom: 4px solid ${prop('theme.colors.blueGreen')};
 `;
 
 const StyledH1 = styled.h1`
