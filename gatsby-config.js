@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `.env`,
+  path: `${__dirname}/.env`,
 });
 
 module.exports = {
@@ -9,6 +9,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-styled-components`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/markdown`,
+    //     name: 'markdown-pages',
+    //   },
+    // },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-graphcms`,
       options: {
