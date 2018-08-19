@@ -16,7 +16,17 @@ const Heading = styled.h2`
   color: ${prop('theme.colors.darkBlue')};
 `;
 const Text = styled.div`
+  font-family: sans-serif;
+  & h3 {
+    color: ${prop('theme.colors.lightBlue')}
+  }
+
+  $ pre {
+    font-family: monospace;
+  }
+
   & p {
+
     color: ${prop('theme.colors.textGrey')};
   }
 `;
