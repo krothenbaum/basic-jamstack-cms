@@ -22,6 +22,7 @@ const StyledButton = styled.button`
   padding: 20px;
   color: ${prop('theme.colors.textLight')};
   box-shadow: 4px 4px 0px 0px ${prop('theme.colors.darkBlue')};
+  border-radius: 4px;
   font-weight: 700;
   transition: all 300ms ease-in-out;
   left: 0;
