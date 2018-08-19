@@ -6,6 +6,6 @@ const theme = {
     lightBlue: '#50b1cd',
     blueGreen: '#468a8d',
   },
-}
+};
 
-export default theme
+export default theme;

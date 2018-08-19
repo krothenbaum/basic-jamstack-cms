@@ -1,31 +1,26 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Row } from 'react-rasta'
-import Layout from '../components/Layout'
-import Card from '../components/Card'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Row } from 'react-rasta';
+import Layout from '../components/Layout';
+import Card from '../components/Card';
 
 const IndexPage = ({ data }) => {
-  const { edges } = data.allMarkdownRemark
+  const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
       <Row justifyContent="center" direction="column">
         {edges.map((item, index) => {
-          console.log(item.node)
+          const { html, frontmatter } = item.node;
+          const { title, imgSrc } = frontmatter;
+          const randomSrc = `${imgSrc}?=sig${index}`;
           return (
-            <Card
-              title={item.node.frontmatter.title}
-              imgSrc={item.node.frontmatter.imgSrc}
-              html={item.node.html}
-              key={index}
-            />
-          )
+            <Card title={title} imgSrc={randomSrc} html={html} key={index} />
+          );
         })}
-        {/* <Card title="Hi people" body="Welcome to your new Gatsby site. Now go build something great." imgSrc="https://source.unsplash.com/random/200x200"/>
-    <Card title="Sup FuckFace" body="Still Here? Great, keep working." imgSrc="https://source.unsplash.com/random/200x200"/> */}
       </Row>
     </Layout>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query BlogPosts {
@@ -41,6 +36,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

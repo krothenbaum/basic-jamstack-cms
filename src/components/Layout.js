@@ -1,16 +1,16 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import { Container, Column, Row } from 'react-rasta'
-import styled, { ThemeProvider } from 'styled-components'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import { Container, Column, Row } from 'react-rasta';
+import styled, { ThemeProvider } from 'styled-components';
 
-import Header from './Header'
-import './layout.css'
-import theme from '../styles/theme'
+import Header from './Header';
+import './layout.css';
+import theme from '../styles/theme';
 
 const StyledContainer = styled(Container)`
   background-color: ${theme.colors.blueGreen};
-`
+`;
 
 const Layout = ({ children }) => {
   return (
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
         </ThemeProvider>
       )}
     />
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
