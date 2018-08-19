@@ -6,13 +6,15 @@ import Card from '../components/Card';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allCard;
+  const randomImg = Array.from({length: 3}, () => {
+    return Math.floor(Math.random() * 100)
+  });
   return (
     <Layout>
       <Row justifyContent="center" direction="column">
         {edges.map((item, index) => {
           const { title, imgSrc, markdown } = item.node;
-          const randomNum = Math.floor(Math.random() * 100  * index)
-          const randomSrc = `${imgSrc}?=sig${randomNum}`;
+          const randomSrc = `${imgSrc}?=sig${randomImg[index]}`;
           console.log(randomSrc);
           return (
             <Card title={title} imgSrc={randomSrc} markdown={markdown} key={index} />

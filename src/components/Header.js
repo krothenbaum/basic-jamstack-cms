@@ -26,9 +26,9 @@ const StyledH1 = styled.h1`
 `;
 
 const HeaderContainer = styled.div`
-  margin: 0 auto;
+  /* margin: 0 auto;
   max-width: 960;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 1.0875rem; */
 `;
 
 const Header = ({ siteTitle }) => (

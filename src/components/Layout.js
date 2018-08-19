@@ -16,21 +16,24 @@ const StyledContainer = styled(Container)`
 
 const StyledButton = styled.button`
   font-family: sans-serif;
-  position: relative;
+  position: fixed;
   background: ${prop('theme.colors.lightBlue')};
   border: 1px solid ${prop('theme.colors.textLight')};
   padding: 20px;
   color: ${prop('theme.colors.textLight')};
-  box-shadow: 4px 4px 0px 0px ${prop('theme.colors.darkBlue')};
+  box-shadow: 0px 4px 0px 0px ${prop('theme.colors.darkBlue')};
   border-radius: 4px;
   font-weight: 700;
   transition: all 300ms ease-in-out;
-  left: 0;
-  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  outline: none;
 
   &:hover {
-    left: 4px;
-    top: 4px;
+    right: 0px;
+    bottom: -4px;
     box-shadow: 0 0 0 0 ${prop('theme.colors.blueGreen')};
   }
 `;
@@ -39,12 +42,6 @@ export default class Layout extends Component {
   state = {
     currTheme: primary,
   };
-
-  // componentDidMount() {
-  //   this.setState({
-  //     currTheme: themes.primary,
-  //   });
-  // }
 
   handleThemeChange = e => {
     e.preventDefault();
@@ -85,15 +82,15 @@ export default class Layout extends Component {
               <Row>
                 <Column>
                   <Header siteTitle={data.site.siteMetadata.title} />
+                </Column>
+              </Row>
+              {this.props.children}
                   <StyledButton
                     onClick={e => this.handleThemeChange(e)}
                     type="button"
                   >
                     Switch Theme
                   </StyledButton>
-                </Column>
-              </Row>
-              {this.props.children}
             </StyledContainer>
           </ThemeProvider>
         )}
