@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { prop } from 'styled-tools';
 import { rgba } from 'polished';
 
-  // background-color: ${prop('theme.colors.textGrey', 'rebeccapurple')};
 const StyledHeader = styled.div`
-  background-color: rgba(255,255,255,0.15);
+  background-color: rgba(255, 255, 255, 0.15);
   padding: 1.45rem 1.0875rem;
   margin-bottom: 1.45rem;
   margin-left: -15px;

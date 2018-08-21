@@ -1,16 +1,15 @@
+import { graphql, StaticQuery } from 'gatsby';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
-import { Container, Column, Row } from 'react-rasta';
+import { Column, Container, Row } from 'react-rasta';
 import styled, { ThemeProvider } from 'styled-components';
 import { prop } from 'styled-tools';
+import themes from '../styles/theme';
 import Header from './Header';
 import './layout.css';
-import themes from '../styles/theme';
 
 const { primary, secondary } = themes;
 
-  // background-color: ${prop('theme.colors.blueGreen')};
 const StyledContainer = styled(Container)`
   background: ${prop('theme.colors.gradient')};
 `;

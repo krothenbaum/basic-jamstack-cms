@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import ReactMarkdown from 'react-markdown';
-import LowLight from 'react-lowlight';
 import js from 'highlight.js/lib/languages/javascript';
-import { prop } from 'styled-tools';
-import { Column, Row } from 'react-rasta';
 import { rgba } from 'polished';
+import React from 'react';
+import LowLight from 'react-lowlight';
+import ReactMarkdown from 'react-markdown';
+import { Column, Row } from 'react-rasta';
+import styled from 'styled-components';
+import { prop } from 'styled-tools';
 
 LowLight.registerLanguage('js', js);
 
