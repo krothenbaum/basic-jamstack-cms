@@ -18,7 +18,7 @@ const StyledCard = styled(Column)`
   padding: 1.45rem;
   background-color: ${prop('theme.colors.textLight')};
   border-radius: 4px;
-  box-shadow: 4px 4px 2px ${rgba('#323247', 0.2)};
+  box-shadow: 4px 4px 2px ${props => rgba(props.theme.colors.darkBlue, 0.2)};
   transition: all 250ms ease-out;
 
   &:hover {

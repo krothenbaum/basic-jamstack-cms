@@ -10,8 +10,9 @@ import themes from '../styles/theme';
 
 const { primary, secondary } = themes;
 
+  // background-color: ${prop('theme.colors.blueGreen')};
 const StyledContainer = styled(Container)`
-  background-color: ${primary.colors.blueGreen};
+  background: ${prop('theme.colors.gradient')};
 `;
 
 const StyledButton = styled.button`
