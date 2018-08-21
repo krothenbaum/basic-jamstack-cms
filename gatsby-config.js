@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Basic Jamstack Site',
+    title: 'Advanced Jamstack Site',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
