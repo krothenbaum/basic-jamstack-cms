@@ -3,6 +3,7 @@ import React from 'react';
 import { Row } from 'react-rasta';
 import Card from '../components/Card';
 import Layout from '../components/Layout';
+// import '../components/layout.css';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allCard;

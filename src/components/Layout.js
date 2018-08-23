@@ -6,17 +6,18 @@ import styled, { ThemeProvider } from 'styled-components';
 import { prop } from 'styled-tools';
 import themes from '../styles/theme';
 import Header from './Header';
-import './layout.css';
+// import './layout.css';
 
 const { primary, secondary } = themes;
 
 const StyledContainer = styled(Container)`
   background: ${prop('theme.colors.gradient')};
+  height: 100vh;
 `;
 
 const StyledButton = styled.button`
   font-family: sans-serif;
-  position: fixed;
+  position: absolute;
   background: ${prop('theme.colors.lightBlue')};
   border: 1px solid ${prop('theme.colors.textLight')};
   padding: 20px;
